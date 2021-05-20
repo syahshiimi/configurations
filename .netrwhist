@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/syahrulanuar/.vim'
+let g:netrw_dirhist_9='/Users/syahrulanuar'
+let g:netrw_dirhist_8='/Users/syahrulanuar/.vim'
+let g:netrw_dirhist_7='/Users/syahrulanuar/syahshiimi.github.io/layouts/partials'
+let g:netrw_dirhist_6='/Users/syahrulanuar/syahshiimi.github.io/layouts'
+let g:netrw_dirhist_5='/Users/syahrulanuar/syahshiimi.github.io/layouts/work'
+let g:netrw_dirhist_4='/Users/syahrulanuar/syahshiimi.github.io/content/work/tanahdibawahangin'
+let g:netrw_dirhist_3='/Users/syahrulanuar/syahshiimi.github.io/content/work'
+let g:netrw_dirhist_2='/Users/syahrulanuar/syahshiimi.github.io/content/work/backgroundnoise'
+let g:netrw_dirhist_1='/Users/syahrulanuar/syahshiimi.github.io/content/work'
