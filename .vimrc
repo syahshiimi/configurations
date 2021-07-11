@@ -64,6 +64,7 @@ call plug#begin()
   Plug 'phanviet/vim-monokai-pro'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'supercollider/scvim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 
 call plug#end()
