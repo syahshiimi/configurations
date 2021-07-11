@@ -1,4 +1,5 @@
 " create vim workspace 
+"
 syntax on
 set ai
 set number
@@ -7,6 +8,10 @@ set termguicolors
 set foldmethod=indent
 set hidden
 set cmdheight=2
+
+au BufEnter,BufWinEnter,BufNewFile,BufRead *.sc,*.scd set filetype=supercollider
+au Filetype supercollider packadd scvim
+
 
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
@@ -34,6 +39,8 @@ endfunction
        \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 let g:netrw_banner = 0
+let g:scFlash = 1
+
 
 " Vim-Plug plugins 
 
@@ -56,7 +63,9 @@ call plug#begin()
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   Plug 'phanviet/vim-monokai-pro'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  
+  Plug 'supercollider/scvim'
+
+
 call plug#end()
 
 colorscheme monokai_pro 
