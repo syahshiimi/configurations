@@ -8,10 +8,15 @@ set termguicolors
 set foldmethod=indent
 set hidden
 set cmdheight=2
+set laststatus=2
+
 
 au BufEnter,BufWinEnter,BufNewFile,BufRead *.sc,*.scd set filetype=supercollider
 au Filetype supercollider packadd scvim
 
+" vim bindings
+"
+nmap <C-P> :FZF<CR>
 
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
@@ -40,6 +45,10 @@ endfunction
 
 let g:netrw_banner = 0
 let g:scFlash = 1
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ }
+let g:onedark_termcolors=16 
 
 
 " Vim-Plug plugins 
@@ -55,18 +64,19 @@ call plug#begin()
 
   Plug 'airblade/vim-gitgutter'
   Plug 'mattn/emmet-vim'
-  Plug 'vim-airline/vim-airline'
   Plug 'sheerun/vim-polyglot'
   Plug 'pangloss/vim-javascript'
   Plug 'othree/html5.vim'
   Plug 'plasticboy/vim-markdown'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   Plug 'phanviet/vim-monokai-pro'
+  Plug 'joshdick/onedark.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'supercollider/scvim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
+  Plug 'junegunn/fzf.vim'
+  Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
-colorscheme monokai_pro 
+colorscheme onedark
