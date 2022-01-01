@@ -16,6 +16,9 @@ au Filetype supercollider packadd scvim
 
 " vim bindings
 "
+" set leader
+
+
 nmap <C-P> :FZF<CR>
 
 if has("nvim-0.5.0") || has("patch-8.1.1564")
@@ -51,6 +54,7 @@ let g:lightline = {
 let g:onedark_termcolors=16 
 
 
+
 " Vim-Plug plugins 
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -69,13 +73,14 @@ call plug#begin()
   Plug 'othree/html5.vim'
   Plug 'plasticboy/vim-markdown'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-  Plug 'phanviet/vim-monokai-pro'
   Plug 'joshdick/onedark.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'supercollider/scvim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'itchyny/lightline.vim'
+
+
 
 call plug#end()
 
